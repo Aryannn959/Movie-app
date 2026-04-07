@@ -6,7 +6,7 @@ A modern movie browsing web application built with React that allows users to di
 
 ##  Live Demo
 
- https://your-deployment-link.com
+ https://movie-app-phi-coral.vercel.app
 
 ---
 
@@ -62,7 +62,7 @@ src/
 ## Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/movie-app.git
+git clone https://github.com/Aryannn959/Movie-app.git
 cd movie-app
 npm install
 npm run dev
@@ -72,7 +72,14 @@ npm run dev
 
 ##  Screenshots
 
-*Add screenshots here after deployment*
+##  Screenshots
+ Home Page
+![Home](./images/ScreenShot1.png)
+
+
+
+ Favorites
+[Favorites](./images/ScreenShot2.png)
 
 ---
 

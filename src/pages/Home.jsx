@@ -61,13 +61,15 @@ export default function Home() {
   return (
     <div className="home">
       {/* 🔍 Search */}
-      <input
-        className="search-movie"
-        type="text"
-        value={searchedMovie}
-        onChange={(e) => setSearchedMovie(e.target.value)}
-        placeholder="Search movies..."
-      />
+      <div className="search-container">
+        <input
+          className="search-movie"
+          type="text"
+          value={searchedMovie}
+          onChange={(e) => setSearchedMovie(e.target.value)}
+          placeholder="Search movies..."
+        />
+      </div>
 
       <Link to="/favourites">GoToFav</Link>
 
@@ -80,9 +82,7 @@ export default function Home() {
         ) : movies.length === 0 ? (
           <h2>No movies found 😢</h2>
         ) : (
-          movies.map((movie) => (
-            <MovieCard movie={movie} key={movie.id} />
-          ))
+          movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)
         )}
       </div>
 
@@ -98,9 +98,7 @@ export default function Home() {
 
           <span>Page {page}</span>
 
-          <button onClick={() => setPage((p) => p + 1)}>
-            Next
-          </button>
+          <button onClick={() => setPage((p) => p + 1)}>Next</button>
         </div>
       )}
     </div>

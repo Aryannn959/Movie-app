@@ -5,6 +5,23 @@
   min-height: 100vh;
   color: white;
 }
+.search-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: transparent;
+  
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: center;
+  background: rgba(18, 18, 18, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /* 🔍 Search Input */
 .search-movie {
