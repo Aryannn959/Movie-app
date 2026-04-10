@@ -12,7 +12,7 @@ function Favourites() {
       <Link className="back-link" to={"/"}>← Back to Home</Link>
       <div className="fav-movies-grid">
         {favouriteMovies.length === 0 ? (
-          <p>No favourite movies yet 😢</p>
+          <p>No favourite movies yet </p>
         ) : (
           favouriteMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />

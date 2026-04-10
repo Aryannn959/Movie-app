@@ -14,7 +14,7 @@ export default function Home() {
 
   const debounceRef = useRef(null);
 
-  // 🔥 Single reusable function
+  //  Single reusable function
   async function loadMovies(pageNum = 1) {
     try {
       setLoading(true);
@@ -27,14 +27,14 @@ export default function Home() {
     }
   }
 
-  // 👉 Load movies when page changes (ONLY if not searching)
+  //  Load movies when page changes (ONLY if not searching)
   useEffect(() => {
     if (!searchedMovie.trim()) {
       loadMovies(page);
     }
   }, [page]);
 
-  // 👉 Search logic with debounce
+  //  Search logic with debounce
   useEffect(() => {
     if (!searchedMovie.trim()) {
       loadMovies(page); // reset to current page
@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* 🔍 Search */}
+      {/* Search */}
       <div className="search-container">
         <input
           className="search-movie"
@@ -73,20 +73,20 @@ export default function Home() {
 
       <Link to="/favourites">GoToFav</Link>
 
-      {/* 🎬 Movies Grid */}
+      {/*  Movies Grid */}
       <div className="movies-grid">
         {loading ? (
           Array(8)
             .fill(0)
             .map((_, i) => <SkeletonCard key={i} />)
         ) : movies.length === 0 ? (
-          <h2>No movies found 😢</h2>
+          <h2>No movies found </h2>
         ) : (
           movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)
         )}
       </div>
 
-      {/* 📄 Pagination (only when NOT searching) */}
+      {/*  Pagination (only when NOT searching) */}
       {!searchedMovie.trim() && (
         <div className="pagination">
           <button
